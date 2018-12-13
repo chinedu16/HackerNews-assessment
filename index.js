@@ -26,7 +26,7 @@ request.onload = function () {
     });
   } else {
     const errorMessage = document.createElement('marquee');
-    errorMessage.textContent = `Gah, it's not working!`;
+    errorMessage.textContent = `nothing is working!`;
     app.appendChild(errorMessage);
   }
 }
