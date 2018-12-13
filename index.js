@@ -9,16 +9,16 @@ request.onload = function () {
 
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
-    data.forEach(movie => {
+    data.forEach(news => {
       const card = document.createElement('container');
       card.setAttribute('class', 'card');
 
       const h1 = document.createElement('h1');
-      h1.textContent = movie.title;
+      h1.textContent = news.title;
 
       const p = document.createElement('p');
-      movie.description = movie.description.substring(0, 300);
-      p.textContent = `${movie.description}...`;
+      news.description = news.description.substring(0, 300);
+      p.textContent = `${news.description}...`;
 
       container.appendChild(card);
       card.appendChild(h1);
